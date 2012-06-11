@@ -15,8 +15,13 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Homer::VERSION
 
+  gem.add_dependency 'dependor'
+  gem.add_dependency 'tvdb_party'
+
   gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'rr'
+  gem.add_development_dependency 'mocha'
+  gem.add_development_dependency 'vcr'
+  gem.add_development_dependency 'webmock'
 
   gem.add_development_dependency 'guard'
   gem.add_development_dependency 'guard-rspec'

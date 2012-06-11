@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env ruby
 
-mv 612.avi 'The Simpsons - 06x12 - Homer the Great.avi'
+require_relative '../lib/homer'
+
+Homer.run(ARGV)

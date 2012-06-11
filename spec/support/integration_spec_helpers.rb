@@ -31,7 +31,9 @@ module IntegrationSpecHelpers
 
   def given_following_files(string)
     string_to_files(string).each do |file|
-      FileUtils.touch(test_file_path(file))
+      file = test_file_path(file)
+      FileUtils.mkdir_p(File.dirname(file))
+      FileUtils.touch(file)
     end
   end
 
